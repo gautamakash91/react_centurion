@@ -1,0 +1,8 @@
+.mydiv{
+  width: 300px;
+  background-color: chartreuse;
+}
+
+.mydiv:hover{
+  background-color: aquamarine;
+}

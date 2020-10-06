@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import Fetcher from "./classes/fetcher";
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Fetcher />
   </React.StrictMode>,
   document.getElementById('root')
 );
