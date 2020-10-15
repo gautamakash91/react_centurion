@@ -1,14 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
 import * as serviceWorker from './serviceWorker';
-import Fetcher from "./classes/fetcher";
-
+import UserData from "./classes/userData";
+import Login from "./classes/login";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Fetcher />
+    <Login />
   </React.StrictMode>,
   document.getElementById('root')
 );
