@@ -1,5 +1,8 @@
 import React from "react";
 import "./class3.css";
+import {
+  Link
+} from "react-router-dom";
 
 export default class Styling extends React.Component {
   constructor(props) {
@@ -21,6 +24,9 @@ export default class Styling extends React.Component {
   render() {
     return (
       <div>
+        <Link to="login">
+          Login
+        </Link>
         <div
           className="mydiv"
           style={{

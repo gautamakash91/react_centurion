@@ -112,8 +112,8 @@ export default class Login extends React.Component {
         </Grid>
         <Snackbar
           anchorOrigin={{
-            vertical: 'bottom',
-            horizontal: 'left',
+            vertical: 'top',
+            horizontal: 'center',
           }}
           open={this.state.open}
           autoHideDuration={10000}

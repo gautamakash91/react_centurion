@@ -1,4 +1,7 @@
 import React from "react";
+import {
+  Link
+} from "react-router-dom";
 
 export default class Async extends React.Component {
   constructor(props) {
@@ -12,23 +15,30 @@ export default class Async extends React.Component {
   }
 
   handleClick = () => {
-    var a1 = this.state.a;
-    var b1 = this.state.b;
-    var c1 = this.state.c;
-
-    b1 = a1;
-    c1 = b1;
-
     this.setState({
-      b: b1,
-      c: c1
+      b: this.state.a,
+      c: this.state.b
     })
+    // var a1 = this.state.a;
+    // var b1 = this.state.b;
+    // var c1 = this.state.c;
+
+    // b1 = a1;
+    // c1 = b1;
+
+    // this.setState({
+    //   b: b1,
+    //   c: c1
+    // })
   }
 
 
   render() {
     return (
       <div>
+        <Link to="login">
+          login
+        </Link>
         <button
           onClick={this.handleClick}
         >

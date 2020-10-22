@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import * as serviceWorker from './serviceWorker';
-import UserData from "./classes/userData";
-import Login from "./classes/login";
+import Router from "./router/router";
 
 ReactDOM.render(
   <React.StrictMode>
-    <Login />
+    <Router />
   </React.StrictMode>,
   document.getElementById('root')
 );
