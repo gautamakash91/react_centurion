@@ -10,16 +10,20 @@ import {
   Grid,
   Typography
 } from "@material-ui/core";
+import {
+  Redirect
+} from "react-router-dom";
 
 export default class Login extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-      email: 1,
+      email: "",
       password: "",
       open: false,
-      message: ""
+      message: "",
+      loginSuccess: false
     }
   }
 
@@ -39,7 +43,8 @@ export default class Login extends React.Component {
         if (resJson.token) {
           this.setState({
             open: true,
-            message: "login successful"
+            message: "login successful",
+            loginSuccess: true
           })
         } else {
           this.setState({
@@ -57,7 +62,13 @@ export default class Login extends React.Component {
   }
 
   render() {
+    console.log(this.props);
 
+    if(this.state.loginSuccess === true){
+      return(
+        <Redirect to="getdata" />
+      )
+    }
 
     return (
       <div
@@ -73,6 +84,7 @@ export default class Login extends React.Component {
               <CardContent>
                 <Typography variant="h5">
                   Login
+                  {this.props.x}
                 </Typography>
                 <TextField
                   variant="outlined"
